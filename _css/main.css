@@ -3,11 +3,16 @@
 @import url('reset.css');
 
 html {
-	background: url(../_images/bg.jpg) no-repeat center center fixed;
+	background: url(../_images/bg-stub.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  color: #111;
+}
+
+body {
+  font: 1rem/1.3rem Arial,Helvetica Neue,Helvetica,sans-serif;
 }
 
 a:link, a:visited, a:active {
@@ -20,22 +25,30 @@ a:hover {
 	color: #333;
 }
 
-h1 {
+h1, h2, h3 {
 	color: #333;
-	font: 24px/20px "Georgia","Times","Times New Roman",serif;
-	font-size: 22px;
+	font: 2rem/2.3rem Arial,Helvetica Neue,Helvetica,sans-serif;
+  font-weight: bold;
 	margin: 0 0 20px;
 }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.5rem; }
 
 p {
-  font: 1rem/1.4rem Arial,Helvetica Neue,Helvetica,sans-serif;
+  margin: 0 0 0.5rem;
 }
 
-p:first-of-type {
-  margin-top: -2rem;
+p.first {
+  margin-top: 8rem;
 }
 
-#wrapper {
+hr {
+  height: 6px;
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAFCAYAAABirU3bAAAAJElEQVQYV2NkQAOMyPwzZ878hwuAOCYmJoxgARgHxGZE5oAEAPjrD2k2fXyfAAAAAElFTkSuQmCC) repeat-x;
+  border: 0;
+}
+
+.wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -43,22 +56,84 @@ p:first-of-type {
   margin-top: 1rem;
 }
 
-#content {
+.content {
   background: #fff;
   border-radius: 8px;
+  box-shadow: 0px 3px 8px 0px rgba(86,86,86,0.4);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 2rem;
   position: relative;
   min-height: 25rem;
-  padding: 1rem;
+  padding: 1.5rem;
   width: 85%;
+  text-align: justify;
+}
+
+.project {
+  border: 1px solid #ccc;
+  font-size: 90%;
+  margin: 2rem 0 1rem;
+  padding: 1rem;
+  position: relative;
+  text-align: center;
+  width: 90%;
+}
+.project img { margin-bottom: 1rem; }
+
+.ribbon {
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+  position: absolute;
+  top: -6px;
+  left: -6px;
+}
+.ribbon::before,
+.ribbon::after {
+  position: absolute;
+  content: '';
+  display: block;
+  border: 3px solid #8b1610;
+}
+.ribbon span {
+  position: absolute;
+  display: block;
+  width: 275px;
+  padding: 7px 0;
+  background-color: #b02f29;
+  box-shadow: 0 2px 6px rgba(0,0,0,.1);
+  color: #fff;
+  font-size: 14px;
+  text-shadow: 0 1px 1px rgba(0,0,0,.2);
+  text-transform: uppercase;
+  text-align: center;
+  right: -25px;
+  top: 30px;
+  transform: rotate(-45deg);
+}
+
+.ribbon::before,
+.ribbon::after {
+  border-top-color: transparent;
+  border-left-color: transparent;
+}
+.ribbon::before {
+  top: 0;
+  right: 42px;
+}
+.ribbon::after {
+  bottom: 42px;
+  left: 0;
 }
 
 @media (min-width: 1024px) {
-  #content {
+  .content {
+    width: 50%;
+  }
+  .project {
     width: 50%;
   }
 }
@@ -66,4 +141,10 @@ p:first-of-type {
 #logo {
   top: -2rem;
   position: absolute;
+}
+
+footer {
+  color: #565656;
+  font-size: 80%;
+  margin-top: 1rem;
 }
