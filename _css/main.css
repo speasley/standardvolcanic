@@ -74,7 +74,8 @@ hr {
 }
 
 .project {
-  border: 1px solid #ccc;
+  border: 1px solid #cacaca;
+  border-radius: 8px;
   font-size: 90%;
   margin: 2rem 0 1rem;
   padding: 1rem;
