@@ -17,12 +17,13 @@ body {
 
 a:link, a:visited, a:active {
 	-webkit-transition: all 0.25s ease-in-out;
-	color: #666;
+	color: #2959b0;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #333;
+	color: #173467;
+  text-decoration: underline;
 }
 
 h1, h2, h3 {
@@ -69,7 +70,7 @@ hr {
   min-height: 25rem;
   padding: 1.5rem;
   width: 85%;
-  text-align: justify;
+  text-align: center;
 }
 
 .project {
